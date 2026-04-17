@@ -867,7 +867,7 @@
             <h1>🏆 Desbloquea el Campeón 🏆</h1>
             <p class="subtitle">Argentina Campeón Mundial 2026</p>
             <div class="intro-box">
-                <p>Desbloquea bloques pagando. Precio dinámico desde <strong>$500 ARS</strong> hasta <strong>$2.000 ARS</strong>.</p>
+                <p>Desbloqueá tu bloque por <strong>$1.000 ARS</strong> — precio fijo, sin sorpresas.</p>
                 <p class="jackpot">💰 <strong>¡PREMIO FINAL: $500.000 PESOS!</strong></p>
             </div>
         </div>
@@ -884,7 +884,7 @@
 
                 <div class="info-card">
                     <span class="info-label">Precio Actual</span>
-                    <span class="info-value" id="currentPrice">$500</span>
+                    <span class="info-value" id="currentPrice">$1.000</span>
                 </div>
 
                 <div class="info-card">
@@ -1006,7 +1006,7 @@
 
             <div class="price-display">
                 <div style="font-size: 12px; color: #666; margin-bottom: 4px;">Precio:</div>
-                <div class="amount" id="modalPrice">$500</div>
+                <div class="amount" id="modalPrice">$1.000</div>
             </div>
 
             <div class="payment-section">
@@ -1033,19 +1033,7 @@
         const BLOCKS_TOTAL = 1024;
         const JACKPOT_PRIZE = 500000;
         const NUM_SPECIAL_BLOCKS = 5;
-
-        const PRICE_TIERS = [
-            { min: 0, max: 100, price: 500 },
-            { min: 100, max: 200, price: 1000 },
-            { min: 200, max: 300, price: 1500 },
-            { min: 300, max: 400, price: 1700 },
-            { min: 400, max: 500, price: 1800 },
-            { min: 500, max: 600, price: 1800 },
-            { min: 600, max: 700, price: 1800 },
-            { min: 700, max: 800, price: 1800 },
-            { min: 800, max: 900, price: 2000 },
-            { min: 900, max: 1024, price: 2000 }
-        ];
+        const BLOCK_PRICE = 1000;
 
         // Estado
         let unlockedBlocks = new Set();
@@ -1100,27 +1088,14 @@
             }
         }
 
-        // Obtener precio actual
+        // Obtener precio actual (precio fijo)
         function getCurrentPrice() {
-            const unlockedCount = unlockedBlocks.size;
-            for (let tier of PRICE_TIERS) {
-                if (unlockedCount >= tier.min && unlockedCount < tier.max) {
-                    return tier.price;
-                }
-            }
-            return 2000;
+            return BLOCK_PRICE;
         }
 
-        // Obtener info del tramo
+        // Info del precio fijo
         function getPriceTierInfo() {
-            const unlockedCount = unlockedBlocks.size;
-            for (let tier of PRICE_TIERS) {
-                if (unlockedCount >= tier.min && unlockedCount < tier.max) {
-                    const remaining = tier.max - unlockedCount;
-                    return `Tramo: Bloques ${tier.min}-${tier.max} | Precio: $${tier.price.toLocaleString('es-AR')} | Restan ${remaining} bloques en este tramo`;
-                }
-            }
-            return `Tramo máximo | Precio: $2.000`;
+            return `Precio fijo: $${BLOCK_PRICE.toLocaleString('es-AR')} por bloque · ${BLOCKS_TOTAL - unlockedBlocks.size} bloques disponibles`;
         }
 
         // Renderizar grilla
