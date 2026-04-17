@@ -528,7 +528,7 @@
 
     <script>
         // Configuración
-        const API_BASE_URL = 'fetch("https://mundial-2026-production-5138.up.railway.app/crear-preferencia")'; // Cambiar cuando despliegues
+        const API_BASE_URL = 'https://mundial-2026-production-5138.up.railway.app'; // Cambiar cuando despliegues
         const GRID_SIZE = 32;
         const BLOCKS_TOTAL = 1024;
         const JACKPOT_PRIZE = 500000;
@@ -696,17 +696,15 @@
                 const price = getCurrentPrice();
 
                 // Crear preferencia de pago
-                const response = await fetch(`${API_BASE_URL}/api/create-preference`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        blockIndex: selectedBlock,
-                        amount: price,
-                        currency: 'ars',
-                        method: selectedPaymentMethod,
-                        userId: userId
-                    })
-                });
+                const response = await fetch(`${API_BASE_URL}/crear-preferencia`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        titulo: "Nombre del producto",
+        precio: price,
+        cantidad: 1
+    })
+});
 
                 if (!response.ok) {
                     throw new Error('Error al crear preferencia de pago');
@@ -714,9 +712,8 @@
 
                 const data = await response.json();
 
-                if (selectedPaymentMethod === 'mercadopago' && data.initPoint) {
-                    // Redirigir a Mercado Pago
-                    window.location.href = data.initPoint;
+                if (selectedPaymentMethod === 'mercadopago' && data.init_point) {
+    window.location.href = data.init_point;
                 } else if (selectedPaymentMethod === 'stripe' && data.clientSecret) {
                     // Implementar Stripe (requiere stripe.js)
                     showError('Stripe aún no implementado. Usa Mercado Pago.');
