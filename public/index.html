@@ -437,6 +437,428 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===== SECCIÓN QUIÉN SOY ===== */
+        .who-section {
+            background: linear-gradient(135deg, #fff9f0 0%, #fff3e0 100%);
+            border: 2px solid #FFB74D;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .who-section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .who-avatar {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.3);
+        }
+
+        .who-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #E65100;
+            margin-bottom: 2px;
+        }
+
+        .who-subtitle {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .who-text {
+            font-size: 13.5px;
+            color: #444;
+            line-height: 1.75;
+        }
+
+        .who-text p {
+            margin-bottom: 10px;
+        }
+
+        .who-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .who-highlight {
+            background: #FFF3CD;
+            border-left: 3px solid #FFC107;
+            padding: 10px 12px;
+            border-radius: 0 6px 6px 0;
+            margin: 12px 0;
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ===== SECCIÓN IMPACTO SOCIAL ===== */
+        .social-section {
+            background: linear-gradient(135deg, #f0faf4 0%, #e8f5e9 100%);
+            border: 2px solid #66BB6A;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2E7D32;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .social-card {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #C8E6C9;
+        }
+
+        .social-card-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .social-card-label {
+            font-size: 11px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .social-card-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        .social-text {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.65;
+        }
+
+        .social-commitment {
+            background: #E8F5E9;
+            border: 1px solid #A5D6A7;
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 12px;
+            font-size: 12.5px;
+            color: #2E7D32;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* ===== SECCIÓN COMENTARIOS ===== */
+        .comments-section {
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafafa;
+        }
+
+        .comments-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comments-subtitle {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 16px;
+        }
+
+        .comment-form {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 13px;
+            font-family: inherit;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .comment-form input:focus,
+        .comment-form textarea:focus {
+            border-color: #1a73e8;
+        }
+
+        .comment-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .submit-comment-btn {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-comment-btn:hover {
+            background: #1557b0;
+        }
+
+        .submit-comment-btn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        .comment-pending-msg {
+            background: #fff8e1;
+            border: 1px solid #FFD54F;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 12.5px;
+            color: #795548;
+            text-align: center;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .comment-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            font-size: 13px;
+            color: #1a73e8;
+        }
+
+        .comment-date {
+            font-size: 11px;
+            color: #aaa;
+        }
+
+        .comment-body {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .comment-reply {
+            background: #f0f7ff;
+            border-left: 3px solid #1a73e8;
+            border-radius: 0 6px 6px 0;
+            padding: 10px 12px;
+            margin-top: 8px;
+        }
+
+        .comment-reply-label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 4px;
+        }
+
+        .comment-reply-text {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.55;
+        }
+
+        .no-comments-msg {
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+            padding: 20px 0;
+        }
+
+        /* ===== PANEL ADMIN ===== */
+        .admin-toggle {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .admin-toggle-btn {
+            background: none;
+            border: none;
+            color: #ccc;
+            font-size: 11px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .admin-panel {
+            background: #1a1a2e;
+            color: white;
+            border-radius: 10px;
+            padding: 16px;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .admin-panel.visible {
+            display: block;
+        }
+
+        .admin-panel h4 {
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: #FFD700;
+            letter-spacing: 1px;
+        }
+
+        .admin-login {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .admin-login input {
+            flex: 1;
+            border: 1px solid #444;
+            background: #2a2a3e;
+            color: white;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .admin-login button {
+            background: #FFD700;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .admin-comment-item {
+            background: #2a2a3e;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+        }
+
+        .admin-comment-item .meta {
+            font-size: 11px;
+            color: #aaa;
+            margin-bottom: 6px;
+        }
+
+        .admin-comment-item .text {
+            font-size: 13px;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .admin-reply-input {
+            width: 100%;
+            border: 1px solid #444;
+            background: #1a1a2e;
+            color: white;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 12px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 60px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .admin-approve-btn {
+            background: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .admin-reject-btn {
+            background: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .admin-empty {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            padding: 16px;
+        }
     </style>
 </head>
 <body>
@@ -491,6 +913,84 @@
                 <h3>🎊 ¡¡¡PREMIO FINAL!!! 🎊</h3>
                 <div class="jackpot-amount">$500.000</div>
                 <p style="color: #8B0000; font-size: 12px; margin-top: 8px;">¡Ganaste el premio! Se acreditará en tu cuenta.</p>
+            </div>
+
+            <!-- ===== SECCIÓN QUIÉN SOY ===== -->
+            <div class="who-section">
+                <div class="who-section-header">
+                    <div class="who-avatar">🙋</div>
+                    <div>
+                        <div class="who-title">¿Quién está detrás de esta página?</div>
+                        <div class="who-subtitle">Un poco de transparencia 👇</div>
+                    </div>
+                </div>
+                <div class="who-text">
+                    <p>Hola, me llamo <strong>Fausto</strong> y soy un estudiante de secundaria de Argentina. Tenía ganas de hacer algo por mi cuenta para ayudar en casa y se me ocurrió esta idea: crear una página donde todos podamos ganar juntos.</p>
+                    <div class="who-highlight">
+                        "No soy una empresa ni un negocio. Soy un pibe que quiere ser transparente con todo lo que hace y que la gente confíe en lo que propongo."
+                    </div>
+                    <p>La idea es simple: entre todos desbloqueamos la imagen, y cuando se termina, hay un premio real que se sortea entre los participantes. Yo me quedo con una parte para seguir con el proyecto y ayudar en casa, pero el objetivo siempre fue que esto sea algo honesto y divertido para todos.</p>
+                    <p>Si tenés alguna duda o pregunta, podés dejarla en la sección de comentarios abajo. Leo todo personalmente. 💬</p>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN IMPACTO SOCIAL ===== -->
+            <div class="social-section">
+                <div class="social-title">
+                    💚 Parte del premio va a quienes más lo necesitan
+                </div>
+                <div class="social-cards">
+                    <div class="social-card">
+                        <div class="social-card-icon">🏠</div>
+                        <div class="social-card-label">Personas en situación de calle</div>
+                        <div class="social-card-value">10%</div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-card-icon">🛠️</div>
+                        <div class="social-card-label">Trabajadores informales</div>
+                        <div class="social-card-value">10%</div>
+                    </div>
+                </div>
+                <div class="social-text">
+                    Decidí destinar el <strong>20% de lo que recaudo</strong> para ayudar a personas en situación de calle y a trabajadores informales en Argentina. No son palabras vacías: cuando llegue el momento voy a compartir públicamente en esta misma página a quién se entregó la ayuda y de qué manera, con toda la transparencia del caso.
+                </div>
+                <div class="social-commitment">
+                    🤝 Compromiso público: publicaré fotos y detalles de cada donación realizada.
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN COMENTARIOS ===== -->
+            <div class="comments-section">
+                <div class="comments-title">💬 Preguntas y comentarios</div>
+                <div class="comments-subtitle">¿Tenés dudas? Dejá tu pregunta y te respondo personalmente.</div>
+
+                <div class="comment-form">
+                    <input type="text" id="commentName" placeholder="Tu nombre (ej: Juan)" maxlength="40">
+                    <textarea id="commentText" placeholder="Escribí tu pregunta o comentario acá..."></textarea>
+                    <div id="commentPendingMsg" class="comment-pending-msg">
+                        ✅ ¡Gracias por tu comentario! Lo voy a revisar y publicar a la brevedad.
+                    </div>
+                    <button class="submit-comment-btn" id="submitCommentBtn" onclick="submitComment()">📨 Enviar comentario</button>
+                </div>
+
+                <div class="comment-list" id="commentList">
+                    <div class="no-comments-msg" id="noCommentsMsg">Todavía no hay comentarios aprobados. ¡Sé el primero en preguntar!</div>
+                </div>
+
+                <div class="admin-toggle">
+                    <button class="admin-toggle-btn" onclick="toggleAdminPanel()" title="Panel admin">···</button>
+                </div>
+
+                <div class="admin-panel" id="adminPanel">
+                    <h4>🔐 PANEL DE ADMINISTRACIÓN</h4>
+                    <div class="admin-login" id="adminLoginSection">
+                        <input type="password" id="adminPasswordInput" placeholder="Contraseña" onkeydown="if(event.key==='Enter') adminLogin()">
+                        <button onclick="adminLogin()">Entrar</button>
+                    </div>
+                    <div id="adminContent" style="display:none;">
+                        <div id="pendingCommentsList"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="footer">
@@ -782,6 +1282,137 @@
                 history.replaceState({}, document.title, window.location.pathname);
             }
         }
+
+        // ===== SISTEMA DE COMENTARIOS =====
+        const ADMIN_PASSWORD = 'fausto2026'; // Cambiá esta contraseña
+        let adminLoggedIn = false;
+
+        function getComments() {
+            try { return JSON.parse(localStorage.getItem('comments_v1') || '[]'); }
+            catch(e) { return []; }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem('comments_v1', JSON.stringify(comments));
+        }
+
+        function formatDate(ts) {
+            const d = new Date(ts);
+            return d.toLocaleDateString('es-AR', { day:'2-digit', month:'2-digit', year:'numeric' });
+        }
+
+        function renderPublicComments() {
+            const comments = getComments().filter(c => c.status === 'approved');
+            const list = document.getElementById('commentList');
+            const noMsg = document.getElementById('noCommentsMsg');
+
+            // Eliminar comentarios previos (no el msg)
+            Array.from(list.querySelectorAll('.comment-item')).forEach(el => el.remove());
+
+            if (comments.length === 0) {
+                noMsg.style.display = 'block';
+                return;
+            }
+            noMsg.style.display = 'none';
+
+            comments.forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-author">👤 ${escapeHtml(c.name)}</span>
+                        <span class="comment-date">${formatDate(c.ts)}</span>
+                    </div>
+                    <div class="comment-body">${escapeHtml(c.text)}</div>
+                    ${c.reply ? `
+                    <div class="comment-reply">
+                        <div class="comment-reply-label">✏️ Respuesta de Fausto:</div>
+                        <div class="comment-reply-text">${escapeHtml(c.reply)}</div>
+                    </div>` : ''}
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function submitComment() {
+            const name = document.getElementById('commentName').value.trim();
+            const text = document.getElementById('commentText').value.trim();
+            if (!name || !text) { alert('Por favor completá tu nombre y tu comentario.'); return; }
+
+            const comments = getComments();
+            comments.push({ id: Date.now(), name, text, status: 'pending', ts: Date.now(), reply: '' });
+            saveComments(comments);
+
+            document.getElementById('commentName').value = '';
+            document.getElementById('commentText').value = '';
+            const msg = document.getElementById('commentPendingMsg');
+            msg.style.display = 'block';
+            setTimeout(() => msg.style.display = 'none', 4000);
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('visible');
+        }
+
+        function adminLogin() {
+            const pw = document.getElementById('adminPasswordInput').value;
+            if (pw === ADMIN_PASSWORD) {
+                adminLoggedIn = true;
+                document.getElementById('adminLoginSection').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+            } else {
+                alert('Contraseña incorrecta.');
+            }
+        }
+
+        function renderAdminComments() {
+            if (!adminLoggedIn) return;
+            const pending = getComments().filter(c => c.status === 'pending');
+            const container = document.getElementById('pendingCommentsList');
+
+            if (pending.length === 0) {
+                container.innerHTML = '<div class="admin-empty">No hay comentarios pendientes ✅</div>';
+                return;
+            }
+
+            container.innerHTML = pending.map(c => `
+                <div class="admin-comment-item" id="admin-c-${c.id}">
+                    <div class="meta">👤 ${escapeHtml(c.name)} — ${formatDate(c.ts)}</div>
+                    <div class="text">${escapeHtml(c.text)}</div>
+                    <textarea class="admin-reply-input" id="reply-${c.id}" placeholder="Escribí tu respuesta (opcional)..."></textarea>
+                    <div class="admin-actions">
+                        <button class="admin-approve-btn" onclick="approveComment(${c.id})">✅ Aprobar</button>
+                        <button class="admin-reject-btn" onclick="rejectComment(${c.id})">🗑️ Rechazar</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function approveComment(id) {
+            const reply = (document.getElementById('reply-' + id) || {}).value || '';
+            const comments = getComments().map(c => {
+                if (c.id === id) return { ...c, status: 'approved', reply: reply.trim() };
+                return c;
+            });
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            const comments = getComments().filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+        }
+
+        function escapeHtml(str) {
+            return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        // Renderizar comentarios públicos al cargar
+        renderPublicComments();
 
         // Inicializar al cargar
         init();
