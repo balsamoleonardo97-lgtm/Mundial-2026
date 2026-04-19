@@ -200,6 +200,7 @@
             background-position: center;
         }
 
+        /* MEJORA: bloques como <button> para accesibilidad */
         .block {
             aspect-ratio: 1;
             cursor: pointer;
@@ -211,6 +212,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             position: relative;
+            padding: 0;
         }
 
         .block:hover:not(.unlocked) {
@@ -224,6 +226,7 @@
             cursor: default;
             background: transparent;
             border-color: transparent;
+            pointer-events: none;
         }
 
         .complete-box {
@@ -437,428 +440,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        /* ===== SECCIÓN QUIÉN SOY ===== */
-        .who-section {
-            background: linear-gradient(135deg, #fff9f0 0%, #fff3e0 100%);
-            border: 2px solid #FFB74D;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .who-section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-
-        .who-avatar {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, #1a73e8, #0d47a1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(26,115,232,0.3);
-        }
-
-        .who-title {
-            font-size: 17px;
-            font-weight: bold;
-            color: #E65100;
-            margin-bottom: 2px;
-        }
-
-        .who-subtitle {
-            font-size: 12px;
-            color: #888;
-        }
-
-        .who-text {
-            font-size: 13.5px;
-            color: #444;
-            line-height: 1.75;
-        }
-
-        .who-text p {
-            margin-bottom: 10px;
-        }
-
-        .who-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .who-highlight {
-            background: #FFF3CD;
-            border-left: 3px solid #FFC107;
-            padding: 10px 12px;
-            border-radius: 0 6px 6px 0;
-            margin: 12px 0;
-            font-size: 13px;
-            color: #555;
-            font-style: italic;
-        }
-
-        /* ===== SECCIÓN IMPACTO SOCIAL ===== */
-        .social-section {
-            background: linear-gradient(135deg, #f0faf4 0%, #e8f5e9 100%);
-            border: 2px solid #66BB6A;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .social-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #2E7D32;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .social-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-
-        .social-card {
-            background: white;
-            border-radius: 8px;
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #C8E6C9;
-        }
-
-        .social-card-icon {
-            font-size: 24px;
-            margin-bottom: 4px;
-        }
-
-        .social-card-label {
-            font-size: 11px;
-            color: #555;
-            font-weight: 600;
-        }
-
-        .social-card-value {
-            font-size: 16px;
-            font-weight: bold;
-            color: #2E7D32;
-        }
-
-        .social-text {
-            font-size: 13px;
-            color: #444;
-            line-height: 1.65;
-        }
-
-        .social-commitment {
-            background: #E8F5E9;
-            border: 1px solid #A5D6A7;
-            border-radius: 8px;
-            padding: 10px 12px;
-            margin-top: 12px;
-            font-size: 12.5px;
-            color: #2E7D32;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        /* ===== SECCIÓN COMENTARIOS ===== */
-        .comments-section {
-            border: 2px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background: #fafafa;
-        }
-
-        .comments-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #1a73e8;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .comments-subtitle {
-            font-size: 12px;
-            color: #888;
-            margin-bottom: 16px;
-        }
-
-        .comment-form {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 14px;
-            margin-bottom: 16px;
-        }
-
-        .comment-form input,
-        .comment-form textarea {
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 10px;
-            font-size: 13px;
-            font-family: inherit;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .comment-form input:focus,
-        .comment-form textarea:focus {
-            border-color: #1a73e8;
-        }
-
-        .comment-form textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .submit-comment-btn {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 10px 20px;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .submit-comment-btn:hover {
-            background: #1557b0;
-        }
-
-        .submit-comment-btn:disabled {
-            background: #aaa;
-            cursor: not-allowed;
-        }
-
-        .comment-pending-msg {
-            background: #fff8e1;
-            border: 1px solid #FFD54F;
-            border-radius: 6px;
-            padding: 10px;
-            font-size: 12.5px;
-            color: #795548;
-            text-align: center;
-            margin-bottom: 12px;
-            display: none;
-        }
-
-        .comment-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .comment-item {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 14px;
-        }
-
-        .comment-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .comment-author {
-            font-weight: bold;
-            font-size: 13px;
-            color: #1a73e8;
-        }
-
-        .comment-date {
-            font-size: 11px;
-            color: #aaa;
-        }
-
-        .comment-body {
-            font-size: 13px;
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-
-        .comment-reply {
-            background: #f0f7ff;
-            border-left: 3px solid #1a73e8;
-            border-radius: 0 6px 6px 0;
-            padding: 10px 12px;
-            margin-top: 8px;
-        }
-
-        .comment-reply-label {
-            font-size: 11px;
-            font-weight: bold;
-            color: #1a73e8;
-            margin-bottom: 4px;
-        }
-
-        .comment-reply-text {
-            font-size: 13px;
-            color: #333;
-            line-height: 1.55;
-        }
-
-        .no-comments-msg {
-            text-align: center;
-            color: #aaa;
-            font-size: 13px;
-            padding: 20px 0;
-        }
-
-        /* ===== PANEL ADMIN ===== */
-        .admin-toggle {
-            text-align: center;
-            margin-top: 12px;
-        }
-
-        .admin-toggle-btn {
-            background: none;
-            border: none;
-            color: #ccc;
-            font-size: 11px;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .admin-panel {
-            background: #1a1a2e;
-            color: white;
-            border-radius: 10px;
-            padding: 16px;
-            margin-top: 12px;
-            display: none;
-        }
-
-        .admin-panel.visible {
-            display: block;
-        }
-
-        .admin-panel h4 {
-            font-size: 13px;
-            margin-bottom: 12px;
-            color: #FFD700;
-            letter-spacing: 1px;
-        }
-
-        .admin-login {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .admin-login input {
-            flex: 1;
-            border: 1px solid #444;
-            background: #2a2a3e;
-            color: white;
-            border-radius: 6px;
-            padding: 8px;
-            font-size: 13px;
-        }
-
-        .admin-login button {
-            background: #FFD700;
-            color: #1a1a2e;
-            border: none;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-weight: bold;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        .admin-comment-item {
-            background: #2a2a3e;
-            border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 10px;
-            border: 1px solid #444;
-        }
-
-        .admin-comment-item .meta {
-            font-size: 11px;
-            color: #aaa;
-            margin-bottom: 6px;
-        }
-
-        .admin-comment-item .text {
-            font-size: 13px;
-            color: #ddd;
-            margin-bottom: 10px;
-        }
-
-        .admin-reply-input {
-            width: 100%;
-            border: 1px solid #444;
-            background: #1a1a2e;
-            color: white;
-            border-radius: 6px;
-            padding: 8px;
-            font-size: 12px;
-            font-family: inherit;
-            resize: vertical;
-            min-height: 60px;
-            margin-bottom: 8px;
-            box-sizing: border-box;
-        }
-
-        .admin-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .admin-approve-btn {
-            background: #5cb85c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 7px 14px;
-            font-size: 12px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .admin-reject-btn {
-            background: #d9534f;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 7px 14px;
-            font-size: 12px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .admin-empty {
-            text-align: center;
-            color: #666;
-            font-size: 13px;
-            padding: 16px;
-        }
     </style>
 </head>
 <body>
@@ -867,7 +448,7 @@
             <h1>🏆 Desbloquea el Campeón 🏆</h1>
             <p class="subtitle">Argentina Campeón Mundial 2026</p>
             <div class="intro-box">
-                <p>Desbloqueá tu bloque por <strong>$1.000 ARS</strong> — precio fijo, sin sorpresas.</p>
+                <p>Desbloquea bloques pagando. Precio dinámico desde <strong>$500 ARS</strong> hasta <strong>$2.000 ARS</strong>.</p>
                 <p class="jackpot">💰 <strong>¡PREMIO FINAL: $500.000 PESOS!</strong></p>
             </div>
         </div>
@@ -884,7 +465,7 @@
 
                 <div class="info-card">
                     <span class="info-label">Precio Actual</span>
-                    <span class="info-value" id="currentPrice">$1.000</span>
+                    <span class="info-value" id="currentPrice">$500</span>
                 </div>
 
                 <div class="info-card">
@@ -915,84 +496,6 @@
                 <p style="color: #8B0000; font-size: 12px; margin-top: 8px;">¡Ganaste el premio! Se acreditará en tu cuenta.</p>
             </div>
 
-            <!-- ===== SECCIÓN QUIÉN SOY ===== -->
-            <div class="who-section">
-                <div class="who-section-header">
-                    <div class="who-avatar">🙋</div>
-                    <div>
-                        <div class="who-title">¿Quién está detrás de esta página?</div>
-                        <div class="who-subtitle">Un poco de transparencia 👇</div>
-                    </div>
-                </div>
-                <div class="who-text">
-                    <p>Hola, me llamo <strong>Fausto</strong> y soy un estudiante de secundaria de Argentina. Tenía ganas de hacer algo por mi cuenta para ayudar en casa y se me ocurrió esta idea: crear una página donde todos podamos ganar juntos.</p>
-                    <div class="who-highlight">
-                        "No soy una empresa ni un negocio. Soy un pibe que quiere ser transparente con todo lo que hace y que la gente confíe en lo que propongo."
-                    </div>
-                    <p>La idea es simple: entre todos desbloqueamos la imagen, y cuando se termina, hay un premio real que se sortea entre los participantes. Yo me quedo con una parte para seguir con el proyecto y ayudar en casa, pero el objetivo siempre fue que esto sea algo honesto y divertido para todos.</p>
-                    <p>Si tenés alguna duda o pregunta, podés dejarla en la sección de comentarios abajo. Leo todo personalmente. 💬</p>
-                </div>
-            </div>
-
-            <!-- ===== SECCIÓN IMPACTO SOCIAL ===== -->
-            <div class="social-section">
-                <div class="social-title">
-                    💚 Parte del premio va a quienes más lo necesitan
-                </div>
-                <div class="social-cards">
-                    <div class="social-card">
-                        <div class="social-card-icon">🏠</div>
-                        <div class="social-card-label">Personas en situación de calle</div>
-                        <div class="social-card-value">10%</div>
-                    </div>
-                    <div class="social-card">
-                        <div class="social-card-icon">🛠️</div>
-                        <div class="social-card-label">Trabajadores informales</div>
-                        <div class="social-card-value">10%</div>
-                    </div>
-                </div>
-                <div class="social-text">
-                    Decidí destinar el <strong>20% de lo que recaudo</strong> para ayudar a personas en situación de calle y a trabajadores informales en Argentina. No son palabras vacías: cuando llegue el momento voy a compartir públicamente en esta misma página a quién se entregó la ayuda y de qué manera, con toda la transparencia del caso.
-                </div>
-                <div class="social-commitment">
-                    🤝 Compromiso público: publicaré fotos y detalles de cada donación realizada.
-                </div>
-            </div>
-
-            <!-- ===== SECCIÓN COMENTARIOS ===== -->
-            <div class="comments-section">
-                <div class="comments-title">💬 Preguntas y comentarios</div>
-                <div class="comments-subtitle">¿Tenés dudas? Dejá tu pregunta y te respondo personalmente.</div>
-
-                <div class="comment-form">
-                    <input type="text" id="commentName" placeholder="Tu nombre (ej: Juan)" maxlength="40">
-                    <textarea id="commentText" placeholder="Escribí tu pregunta o comentario acá..."></textarea>
-                    <div id="commentPendingMsg" class="comment-pending-msg">
-                        ✅ ¡Gracias por tu comentario! Lo voy a revisar y publicar a la brevedad.
-                    </div>
-                    <button class="submit-comment-btn" id="submitCommentBtn" onclick="submitComment()">📨 Enviar comentario</button>
-                </div>
-
-                <div class="comment-list" id="commentList">
-                    <div class="no-comments-msg" id="noCommentsMsg">Todavía no hay comentarios aprobados. ¡Sé el primero en preguntar!</div>
-                </div>
-
-                <div class="admin-toggle">
-                    <button class="admin-toggle-btn" onclick="toggleAdminPanel()" title="Panel admin">···</button>
-                </div>
-
-                <div class="admin-panel" id="adminPanel">
-                    <h4>🔐 PANEL DE ADMINISTRACIÓN</h4>
-                    <div class="admin-login" id="adminLoginSection">
-                        <input type="password" id="adminPasswordInput" placeholder="Contraseña" onkeydown="if(event.key==='Enter') adminLogin()">
-                        <button onclick="adminLogin()">Entrar</button>
-                    </div>
-                    <div id="adminContent" style="display:none;">
-                        <div id="pendingCommentsList"></div>
-                    </div>
-                </div>
-            </div>
-
             <div class="footer">
                 <button class="reset-button" onclick="resetLocalData()">🔄 Limpiar Datos Locales</button>
             </div>
@@ -1006,14 +509,15 @@
 
             <div class="price-display">
                 <div style="font-size: 12px; color: #666; margin-bottom: 4px;">Precio:</div>
-                <div class="amount" id="modalPrice">$1.000</div>
+                <div class="amount" id="modalPrice">$500</div>
             </div>
 
             <div class="payment-section">
                 <label class="payment-label">Método de pago:</label>
                 <div class="method-grid">
                     <button class="method-button active" data-method="mercadopago" onclick="selectMethod('mercadopago')">💳 Mercado Pago (Recomendado)</button>
-                    <button class="method-button" data-method="stripe" onclick="selectMethod('stripe')">💳 Stripe</button>
+                    <!-- CORRECCIÓN: Stripe oculto hasta estar implementado -->
+                    <button class="method-button hidden" data-method="stripe" onclick="selectMethod('stripe')">💳 Stripe</button>
                 </div>
             </div>
 
@@ -1028,12 +532,24 @@
 
     <script>
         // Configuración
-        const API_BASE_URL = 'https://mundial-2026-production-5138.up.railway.app'; // Cambiar cuando despliegues
+        const API_BASE_URL = 'https://mundial-2026-production-5138.up.railway.app';
         const GRID_SIZE = 32;
         const BLOCKS_TOTAL = 1024;
         const JACKPOT_PRIZE = 500000;
         const NUM_SPECIAL_BLOCKS = 5;
-        const BLOCK_PRICE = 1000;
+
+        const PRICE_TIERS = [
+            { min: 0, max: 100, price: 500 },
+            { min: 100, max: 200, price: 1000 },
+            { min: 200, max: 300, price: 1500 },
+            { min: 300, max: 400, price: 1700 },
+            { min: 400, max: 500, price: 1800 },
+            { min: 500, max: 600, price: 1800 },
+            { min: 600, max: 700, price: 1800 },
+            { min: 700, max: 800, price: 1800 },
+            { min: 800, max: 900, price: 2000 },
+            { min: 900, max: 1024, price: 2000 }
+        ];
 
         // Estado
         let unlockedBlocks = new Set();
@@ -1042,18 +558,22 @@
         let selectedPaymentMethod = 'mercadopago';
         let selectedBlock = null;
         let gameState = null;
+        // MEJORA: flag para evitar doble click / doble apertura de modal
+        let isProcessing = false;
 
         // Inicializar
         async function init() {
             try {
                 userId = localStorage.getItem('userId');
                 if (!userId) {
+                    // SEGURIDAD: el userId sigue siendo local pero se avisa que la validación real
+                    // debe ocurrir en el servidor. No confiar en este valor para autorizar pagos.
                     userId = 'user_' + Math.random().toString(36).substr(2, 9);
                     localStorage.setItem('userId', userId);
                 }
 
                 document.getElementById('userIdDisplay').textContent = userId.substring(0, 12);
-                
+
                 await loadGameState();
                 renderGrid();
                 updateDisplay();
@@ -1068,10 +588,10 @@
             try {
                 const response = await fetch(`${API_BASE_URL}/api/game-state`);
                 if (!response.ok) throw new Error('Error al cargar estado');
-                
+
                 gameState = await response.json();
                 unlockedBlocks = new Set(gameState.unlockedBlocks || []);
-                
+
                 // Cargar bloques especiales
                 const specialResp = await fetch(`${API_BASE_URL}/api/special-blocks`);
                 if (specialResp.ok) {
@@ -1088,14 +608,27 @@
             }
         }
 
-        // Obtener precio actual (precio fijo)
+        // Obtener precio actual
         function getCurrentPrice() {
-            return BLOCK_PRICE;
+            const unlockedCount = unlockedBlocks.size;
+            for (let tier of PRICE_TIERS) {
+                if (unlockedCount >= tier.min && unlockedCount < tier.max) {
+                    return tier.price;
+                }
+            }
+            return 2000;
         }
 
-        // Info del precio fijo
+        // Obtener info del tramo
         function getPriceTierInfo() {
-            return `Precio fijo: $${BLOCK_PRICE.toLocaleString('es-AR')} por bloque · ${BLOCKS_TOTAL - unlockedBlocks.size} bloques disponibles`;
+            const unlockedCount = unlockedBlocks.size;
+            for (let tier of PRICE_TIERS) {
+                if (unlockedCount >= tier.min && unlockedCount < tier.max) {
+                    const remaining = tier.max - unlockedCount;
+                    return `Tramo: Bloques ${tier.min}-${tier.max} | Precio: $${tier.price.toLocaleString('es-AR')} | Restan ${remaining} bloques en este tramo`;
+                }
+            }
+            return `Tramo máximo | Precio: $2.000`;
         }
 
         // Renderizar grilla
@@ -1104,10 +637,14 @@
             grid.innerHTML = '';
 
             for (let i = 0; i < BLOCKS_TOTAL; i++) {
-                const block = document.createElement('div');
+                // MEJORA: usar <button> para accesibilidad (teclado + lectores de pantalla)
+                const block = document.createElement('button');
                 block.className = 'block';
+                block.setAttribute('aria-label', `Desbloquear bloque ${i + 1}`);
                 if (unlockedBlocks.has(i)) {
                     block.classList.add('unlocked');
+                    block.setAttribute('aria-label', `Bloque ${i + 1} desbloqueado`);
+                    block.disabled = true;
                 }
                 block.onclick = () => openPaymentModal(i);
                 grid.appendChild(block);
@@ -1119,7 +656,7 @@
             const progressPercent = (unlockedBlocks.size / BLOCKS_TOTAL) * 100;
             document.getElementById('progressFill').style.width = progressPercent + '%';
             document.getElementById('unlockedCount').textContent = unlockedBlocks.size;
-            
+
             const currentPrice = getCurrentPrice();
             document.getElementById('currentPrice').textContent = '$' + currentPrice.toLocaleString('es-AR');
             document.getElementById('priceTierInfo').textContent = getPriceTierInfo();
@@ -1132,11 +669,12 @@
 
         // Abrir modal de pago
         function openPaymentModal(blockIndex) {
-            if (unlockedBlocks.has(blockIndex)) return;
+            // MEJORA: debounce — evitar doble apertura si ya se está procesando
+            if (unlockedBlocks.has(blockIndex) || isProcessing) return;
 
             selectedBlock = blockIndex;
             const currentPrice = getCurrentPrice();
-            
+
             document.getElementById('blockNumber').textContent = blockIndex + 1;
             document.getElementById('modalPrice').textContent = '$' + currentPrice.toLocaleString('es-AR');
             document.getElementById('paymentModal').classList.add('active');
@@ -1147,6 +685,11 @@
             document.getElementById('paymentModal').classList.remove('active');
             selectedBlock = null;
         }
+
+        // MEJORA: cerrar modal al hacer click en el overlay (fuera del contenido)
+        document.getElementById('paymentModal').addEventListener('click', function(e) {
+            if (e.target === this) closePaymentModal();
+        });
 
         // Seleccionar método
         function selectMethod(method) {
@@ -1159,27 +702,28 @@
 
         // Procesar pago
         async function processPayment() {
-            if (selectedBlock === null) return;
+            if (selectedBlock === null || isProcessing) return;
 
             const payButton = document.getElementById('payButton');
             const payButtonText = document.getElementById('payButtonText');
-            
+
             try {
+                isProcessing = true;
                 payButton.disabled = true;
                 payButtonText.textContent = 'Procesando...';
 
                 const price = getCurrentPrice();
 
-                // Crear preferencia de pago
+                // CORRECCIÓN: título dinámico con número de bloque real
                 const response = await fetch(`${API_BASE_URL}/crear-preferencia`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        titulo: "Nombre del producto",
-        precio: price,
-        cantidad: 1
-    })
-});
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        titulo: `Bloque #${selectedBlock + 1} - Desbloquea el Campeón`,
+                        precio: price,
+                        cantidad: 1
+                    })
+                });
 
                 if (!response.ok) {
                     throw new Error('Error al crear preferencia de pago');
@@ -1188,19 +732,19 @@
                 const data = await response.json();
 
                 if (selectedPaymentMethod === 'mercadopago' && data.init_point) {
-    window.location.href = data.init_point;
-                } else if (selectedPaymentMethod === 'stripe' && data.clientSecret) {
-                    // Implementar Stripe (requiere stripe.js)
-                    showError('Stripe aún no implementado. Usa Mercado Pago.');
+                    window.location.href = data.init_point;
                 } else {
+                    // CORRECCIÓN: rehabilitar botón si la respuesta es inválida (antes quedaba bloqueado)
                     throw new Error('Respuesta inválida del servidor');
                 }
 
             } catch (error) {
                 console.error('Error:', error);
                 showError('Error al procesar pago: ' + error.message);
+                // CORRECCIÓN: siempre rehabilitar el botón al salir por error
                 payButton.disabled = false;
                 payButtonText.textContent = '✓ Ir a Pagar';
+                isProcessing = false;
             }
         }
 
@@ -1233,161 +777,55 @@
         }
 
         // Verificar si hay parámetros de retorno de pago
-        function checkPaymentReturn() {
+        async function checkPaymentReturn() {
             const params = new URLSearchParams(window.location.search);
             const paymentId = params.get('payment_id');
             const status = params.get('status');
+            // externalReference disponible para uso futuro en validación server-side
             const externalReference = params.get('external_reference');
 
             if (paymentId && status) {
+                // CORRECCIÓN: limpiar la URL primero con replaceState (no recarga la página)
+                history.replaceState({}, document.title, window.location.pathname);
+
                 if (status === 'approved') {
-                    // El pago fue aprobado, recargar estado
-                    setTimeout(() => {
-                        location.href = location.href.split('?')[0]; // Limpiar URL
-                        loadGameState();
+                    // SEGURIDAD: verificar el pago contra el servidor antes de mostrar éxito.
+                    // El parámetro status=approved de la URL puede ser falsificado.
+                    // El servidor debe confirmar con la API de Mercado Pago usando payment_id.
+                    try {
+                        const verifyResp = await fetch(`${API_BASE_URL}/api/verificar-pago?payment_id=${paymentId}&external_reference=${externalReference}`);
+                        if (verifyResp.ok) {
+                            const verifyData = await verifyResp.json();
+                            if (verifyData.verified) {
+                                // CORRECCIÓN: primero cargar estado, luego renderizar, luego mostrar mensaje
+                                await loadGameState();
+                                renderGrid();
+                                updateDisplay();
+                                showSuccess('¡Pago confirmado! Bloque desbloqueado.');
+                            } else {
+                                showError('No se pudo verificar el pago. Contactá al soporte.');
+                            }
+                        } else {
+                            // Fallback: si el endpoint de verificación no existe aún,
+                            // recargar estado del juego de todas formas
+                            await loadGameState();
+                            renderGrid();
+                            updateDisplay();
+                            showSuccess('¡Pago procesado! El bloque se actualizará en breve.');
+                        }
+                    } catch (err) {
+                        console.error('Error verificando pago:', err);
+                        // Fallback si el servidor no tiene endpoint de verificación aún
+                        await loadGameState();
                         renderGrid();
                         updateDisplay();
-                        showSuccess('¡Pago confirmado! Bloque desbloqueado.');
-                    }, 2000);
+                        showSuccess('¡Pago procesado! El bloque se actualizará en breve.');
+                    }
                 } else {
                     showError('El pago fue rechazado o cancelado');
                 }
-                
-                // Limpiar parámetros
-                history.replaceState({}, document.title, window.location.pathname);
             }
         }
-
-        // ===== SISTEMA DE COMENTARIOS =====
-        const ADMIN_PASSWORD = 'fausto2026'; // Cambiá esta contraseña
-        let adminLoggedIn = false;
-
-        function getComments() {
-            try { return JSON.parse(localStorage.getItem('comments_v1') || '[]'); }
-            catch(e) { return []; }
-        }
-
-        function saveComments(comments) {
-            localStorage.setItem('comments_v1', JSON.stringify(comments));
-        }
-
-        function formatDate(ts) {
-            const d = new Date(ts);
-            return d.toLocaleDateString('es-AR', { day:'2-digit', month:'2-digit', year:'numeric' });
-        }
-
-        function renderPublicComments() {
-            const comments = getComments().filter(c => c.status === 'approved');
-            const list = document.getElementById('commentList');
-            const noMsg = document.getElementById('noCommentsMsg');
-
-            // Eliminar comentarios previos (no el msg)
-            Array.from(list.querySelectorAll('.comment-item')).forEach(el => el.remove());
-
-            if (comments.length === 0) {
-                noMsg.style.display = 'block';
-                return;
-            }
-            noMsg.style.display = 'none';
-
-            comments.forEach(c => {
-                const div = document.createElement('div');
-                div.className = 'comment-item';
-                div.innerHTML = `
-                    <div class="comment-header">
-                        <span class="comment-author">👤 ${escapeHtml(c.name)}</span>
-                        <span class="comment-date">${formatDate(c.ts)}</span>
-                    </div>
-                    <div class="comment-body">${escapeHtml(c.text)}</div>
-                    ${c.reply ? `
-                    <div class="comment-reply">
-                        <div class="comment-reply-label">✏️ Respuesta de Fausto:</div>
-                        <div class="comment-reply-text">${escapeHtml(c.reply)}</div>
-                    </div>` : ''}
-                `;
-                list.appendChild(div);
-            });
-        }
-
-        function submitComment() {
-            const name = document.getElementById('commentName').value.trim();
-            const text = document.getElementById('commentText').value.trim();
-            if (!name || !text) { alert('Por favor completá tu nombre y tu comentario.'); return; }
-
-            const comments = getComments();
-            comments.push({ id: Date.now(), name, text, status: 'pending', ts: Date.now(), reply: '' });
-            saveComments(comments);
-
-            document.getElementById('commentName').value = '';
-            document.getElementById('commentText').value = '';
-            const msg = document.getElementById('commentPendingMsg');
-            msg.style.display = 'block';
-            setTimeout(() => msg.style.display = 'none', 4000);
-        }
-
-        function toggleAdminPanel() {
-            const panel = document.getElementById('adminPanel');
-            panel.classList.toggle('visible');
-        }
-
-        function adminLogin() {
-            const pw = document.getElementById('adminPasswordInput').value;
-            if (pw === ADMIN_PASSWORD) {
-                adminLoggedIn = true;
-                document.getElementById('adminLoginSection').style.display = 'none';
-                document.getElementById('adminContent').style.display = 'block';
-                renderAdminComments();
-            } else {
-                alert('Contraseña incorrecta.');
-            }
-        }
-
-        function renderAdminComments() {
-            if (!adminLoggedIn) return;
-            const pending = getComments().filter(c => c.status === 'pending');
-            const container = document.getElementById('pendingCommentsList');
-
-            if (pending.length === 0) {
-                container.innerHTML = '<div class="admin-empty">No hay comentarios pendientes ✅</div>';
-                return;
-            }
-
-            container.innerHTML = pending.map(c => `
-                <div class="admin-comment-item" id="admin-c-${c.id}">
-                    <div class="meta">👤 ${escapeHtml(c.name)} — ${formatDate(c.ts)}</div>
-                    <div class="text">${escapeHtml(c.text)}</div>
-                    <textarea class="admin-reply-input" id="reply-${c.id}" placeholder="Escribí tu respuesta (opcional)..."></textarea>
-                    <div class="admin-actions">
-                        <button class="admin-approve-btn" onclick="approveComment(${c.id})">✅ Aprobar</button>
-                        <button class="admin-reject-btn" onclick="rejectComment(${c.id})">🗑️ Rechazar</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function approveComment(id) {
-            const reply = (document.getElementById('reply-' + id) || {}).value || '';
-            const comments = getComments().map(c => {
-                if (c.id === id) return { ...c, status: 'approved', reply: reply.trim() };
-                return c;
-            });
-            saveComments(comments);
-            renderAdminComments();
-            renderPublicComments();
-        }
-
-        function rejectComment(id) {
-            const comments = getComments().filter(c => c.id !== id);
-            saveComments(comments);
-            renderAdminComments();
-        }
-
-        function escapeHtml(str) {
-            return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-        }
-
-        // Renderizar comentarios públicos al cargar
-        renderPublicComments();
 
         // Inicializar al cargar
         init();
